@@ -4,16 +4,29 @@ A place to collect all of the code used for various van-related projects. Curren
  - **graph2.py:** Making use of plotly to graph variables such as voltage against time. Reads from .csv files storing the data.
 
 
-## Cloning the repo
-
+## First steps
+### Cloning the repo
 To get the repo on to your computer, type the following commands into the directory in which you would like this repo to exist:
 
 ```bash
 git clone https://github.com/jamesdidathing/vanproj.git
 ```
+### Setting up your environment
+Create a virtual environment in which you can develop in:
+
+```bash
+pip install virtualenv 
+python -m pip virtualenv venv
+source venv/bin/activate
+``` 
+You should now be in your virtual environment (venv). To install the modules that this repo requires:
+```bash
+pip install -r requirements.txt
+``` 
+
 ## Using Git
 
-With the repo now on your computer, some basic commands for using Git are:
+With the repo cloned, and your virtual environemnt made, some basic commands for using Git are:
 
 ```
 git status                      # Tells you which branch you are on, what files have been modified and what changes are "staged"
