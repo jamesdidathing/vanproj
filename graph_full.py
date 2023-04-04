@@ -4,16 +4,16 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+from dash import html
 
 # Load data
-gas = pd.read_csv('/home/pi/VanProj/gas.csv')
-solar = pd.read_csv('/home/pi/VanProj/solar.csv')
-voltages = pd.read_csv('/home/pi/VanProj/vanvolt.csv')
-pressure = pd.read_csv('/home/pi/VanProj/vanpress1.csv')
-airq = pd.read_csv('/home/pi/VanProj/AirQ.csv')
-temphumid = pd.read_csv('/home/pi/VanProj/vandata.csv')
+gas = pd.read_csv('gas.csv')
+solar = pd.read_csv('solar.csv')
+voltages = pd.read_csv('vanvolt.csv')
+pressure = pd.read_csv('vanpress1.csv')
+airq = pd.read_csv('AirQ.csv')
+temphumid = pd.read_csv('vandata.csv')
 
 #------------- Pandas Bit --------------------
 #Create Dataframe
@@ -149,5 +149,5 @@ app.layout = html.Div(className='row',children =[
 
 
 if __name__ == '__main__':
-    app.run_server(host= '192.168.0.38',debug=False)
+    app.run_server(host= '127.0.0.1',debug=False)
 
