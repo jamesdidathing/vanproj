@@ -119,7 +119,7 @@ app.layout = html.Div(className='row',children =[
 
 # Variable Diplay Section - NEEDS SORTING OUT
     html.Label("Current Van Battery Voltage:", style={'display':'inline-block'}),
-    html.H3(latestVanVoltage),
+    html.H3(latestVanVoltage, style={'color':'red', 'backgroundColour':'black'}),
     html.H2("Current Leisure Battery Voltage:"),
     html.H3(latestLeisureVoltage),
 #----------------------------------------------
