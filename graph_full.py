@@ -117,7 +117,7 @@ app.layout = html.Div(className='row',children =[
 	html.H1(children='Van Conditions',
 		style={'font-family':'courier','color':'blue','text-decoration': 'underline','textAlign':'center',}),
 
-# Variable Diplay Section - NEEDS SORTING OUT
+# Variable Diplay Section 
     html.H1(
     children=['Current Van Voltage: ', html.Span(latestVanVoltage,  style={
         'textAlign': 'center',
