@@ -118,10 +118,22 @@ app.layout = html.Div(className='row',children =[
 		style={'font-family':'courier','color':'blue','text-decoration': 'underline','textAlign':'center',}),
 
 # Variable Diplay Section - NEEDS SORTING OUT
-    html.Label("Current Van Battery Voltage:", style={'display':'inline-block'}),
-    html.H3(latestVanVoltage, style={'color':'red', 'backgroundColour':'black'}),
-    html.H2("Current Leisure Battery Voltage:"),
-    html.H3(latestLeisureVoltage),
+    html.H1(
+    children=['Current Van Voltage: ', html.Span(latestVanVoltage,  style={
+        'textAlign': 'center',
+        'color': 'red',
+        'backgroundColor': 'black',
+    })],
+
+    ),
+    html.H1(
+        children=['Current Leisure Voltage: ', html.Span(latestLeisureVoltage,  style={
+            'textAlign': 'center',
+            'color': 'red',
+            'backgroundColor': 'black',
+        })],
+
+    ),
 #----------------------------------------------
 #Temp & Humidity Graph    
     dcc.Graph(id='line-graph1', figure=conditions, style={'display':'inline-block'}),
