@@ -2,6 +2,7 @@
 
 A place to collect all of the code used for various van-related projects. Current projects include:
  - **graph2.py:** Making use of plotly to graph variables such as voltage against time. Reads from .csv files storing the data.
+ - **graph_full.py:** Use of dash framework to visualise the data. Currently only locally hosted.![image](https://user-images.githubusercontent.com/129744486/232454869-609d3427-4d1e-43a0-b0f9-cc675a26e2c9.png)
 
 
 ## First steps
