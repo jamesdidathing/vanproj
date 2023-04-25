@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 from dash_bootstrap_templates import load_figure_template
 
 app = Dash(external_stylesheets=[dbc.themes.LUX])
-load_figure_template('darkly')
+load_figure_template('SLATE')
 
 # Load data
 gas = pd.read_csv('gas.csv')
@@ -54,18 +54,16 @@ app.layout = html.Div(style={'backgroundColor': backgroundColour}, children=[
     html.H1("VanProj Graphs", style={'textAlign': 'center', 'color': text
     }),
 
-    dbc.Container(children=[dcc.Graph(
+    dcc.Graph(
         id='air-quality',
         figure=airq_fig,
-        style={'display': 'flex'}
         ),
 
         dcc.Graph(
         id='solar-voltage',
         figure=solar_fig,
-        style={'display': 'flex'}
         ),
-])
+
         
 ])
 
