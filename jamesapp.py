@@ -36,14 +36,16 @@ backgroundColour='#111111'
 text='#7FDBFF'
 
 
-airq_fig = px.scatter(df, x="Time", y=" Air Quality", hover_data=" Air Quality", title='Air Quality')
+airq_fig = px.scatter(df, x="Time", y=" Air Quality", marginal_y='histogram', color=' Air Quality', 
+                      title='Air Quality')
 airq_fig.update_layout(
     plot_bgcolor=backgroundColour,
     paper_bgcolor=backgroundColour,
     font_color=text,
 )
 
-solar_fig = px.scatter(dfs, x="Time", y="Voltage", hover_data="Voltage", title='Solar Voltage')
+solar_fig = px.line(dfs, x="Time", y="Voltage",
+                       title='Solar Voltage')
 solar_fig.update_layout(
     plot_bgcolor=backgroundColour,
     paper_bgcolor=backgroundColour,
@@ -51,7 +53,7 @@ solar_fig.update_layout(
 )
 
 app.layout = html.Div(style={'backgroundColor': backgroundColour}, children=[
-    html.H1("VanProj Graphs", style={'textAlign': 'center', 'color': text
+    html.H1("VanProj Graphs", style={'textAlign': 'center', 'color': text,
     }),
 
     dcc.Graph(
